@@ -348,70 +348,64 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 <p class="font_8 wixui-rich-text__text" style="font-size:20px; text-align:justify;">&nbsp;</p>
 
 <p class="font_8 wixui-rich-text__text" style="font-size:20px; text-align:justify;"><span style="font-size:20px;" class="wixui-rich-text__text"><span style="font-family:wfont_f600bf_6b757cabf5f14c2589f7609569f9d3a8,wf_6b757cabf5f14c2589f760956,orig_neuropolxrgregular;" class="wixui-rich-text__text">As a gas giant, Jupiter doesn&rsquo;t have a true surface. The planet is mostly swirling gases and liquids. While a spacecraft would have nowhere to land on Jupiter, it wouldn&rsquo;t be able to fly through unscathed either. The extreme pressures and temperatures deep inside the planet crush, melt, and vaporize spacecraft trying to fly into the planet.</span></span></p></div><div id="comp-leiszaqr" class="KcpHeO tz5f0K comp-leiszaqr wixui-rich-text" data-testid="richTextElement"><h2 class="font_2 wixui-rich-text__text" style="font-size:33px; line-height:normal; text-align:center;"><span style="text-shadow:rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;" class="wixui-rich-text__text"><span style="font-size:33px;" class="wixui-rich-text__text"><span style="font-family:wfont_1f3d08_1a9a0b6e6ef54337876908a2b74547f1,wf_1a9a0b6e6ef54337876908a2b,orig_space_age;" class="wixui-rich-text__text"><span class="color_15 wixui-rich-text__text"><span style="letter-spacing:0.01em;" class="wixui-rich-text__text">Jupiter - Earth&#39;s stormy friend</span></span></span></span></span></h2></div><div id="comp-leitdjw9" class="KcpHeO tz5f0K comp-leitdjw9 wixui-rich-text" data-testid="richTextElement"><h2 class="font_2 wixui-rich-text__text" style="font-size:35px; line-height:normal; text-align:center;"><span style="font-size:35px;" class="wixui-rich-text__text"><span style="font-family:wfont_1f140e_28ee451a1fe54ac4a33b285bcca9785b,wf_28ee451a1fe54ac4a33b285bc,orig_orbitronio;" class="wixui-rich-text__text"><span class="color_15 wixui-rich-text__text"><span style="letter-spacing:0.2em;" class="wixui-rich-text__text">Explore photos of Jupiter</span></span></span></span></h2></div>
-<style> 
-  .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-  
-  .gallery-container img {
-  width: 100%;
-  height: 500px; /* примерно одинаковая высота для всех изображений */
-  object-fit: cover; /* подгонять изображения под размеры */
-  cursor: pointer;
-  padding: 30px;
-  box-sizing: border-box;
-}
-  
-  /* Стили для увеличенного изображения */
-  .expanded {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: cover;
-    z-index: 9999;
-  }
-  </style>
-  <style>
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 9998; /* Помещаем фон под увеличенным изображением */
-        display: none; /* Скрываем фон по умолчанию */
-      }
-    
-      .expanded {
-        z-index: 9999;
-      }
-      .overlay.visible {
-    display: block;
-  }
-    </style>
-  <div class="overlay"></div> 
-  <div id="comp-lee2a0fo" class="gallery-container">
-      <img src="Jupiter 1.webp">
-      <img src="Jupiter 2.webp">
-      <img src="Jupiter 3.webp">
-    </div> 
+<link rel="stylesheet" href="123.css">
+  <body>
+    <div class="slider" x-data="{start: true, end: false}" style="padding-top: 10px;">
+    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+      <div class="slider__item">
+        <img class="slider__image" src="https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbWdUIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--84ab61fca9faa459e90c2b331d40de0143de7d9e/Juno_Jupiter_Vortices-PIA25017-800x600.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>NASA's Juno Mission Spies Vortices Near Jupiter's North Pole</h2>
+        </div>
+      </div>      
+      <div class="slider__item">
+        <img class="slider__image" src="https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ0FTIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d91c8056b0a4c3cd4cf6bcd3f7e6eda669270678/stsci-h-p1936a_1800.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Hubble's New Portrait of Jupiter</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdlVSIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ad8018caa2e12b2c5721f7aec3ba396fb8177792/grs_animation_1200.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Great Red Spot Rotation</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYXc9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--809f9fbe2a3c58ee1b21cca2f4f31ef662df5cb5/184_PIA17043_1000.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Simulated View from Europa's Surface (Artist's Concept)</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7ba4d77c91bd02258c5d8efe56689431a1a2960b/PIA02877.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>A Sunrise Across Our World</h2>
+        </div>
+      </div>
+    </div>
     <script>
-  function expandImage() {
-    this.classList.toggle('expanded');
-    var overlay = document.querySelector('.overlay');
-    overlay.classList.toggle('visible');
-  }
-      var images = document.querySelectorAll('.gallery-container img');
-      for (var i = 0; i < images.length; i++) {
-        images[i].addEventListener('click', expandImage);
-      }
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  document.body.appendChild(modal);
+
+  const images = document.querySelectorAll('.slider__image');
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      modal.innerHTML = `<img class="modal__content" src="${image.src}" alt="${image.alt}">`;
+      modal.classList.add('modal--open');
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.classList.remove('modal--open');
+  });
     </script>
+    <div class="slider__nav" style="display: flex;justify-content: center;">
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
 <div data-mesh-id="comp-lenbuh1ninlineContent" data-testid="inline-content" class=""><div data-mesh-id="comp-lenbuh1ninlineContent-gridContainer" data-testid="mesh-container-content"><div id="comp-lenbv56x" class="comp-lenbv56x _xg6_p">
   <iframe title="jupiter" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="1885" height="1150" src="https://sketchfab.com/models/c5275eb96af245e4a8453837ac728a62/embed?preload=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_theme=dark&dnt=1"> </iframe>
 </div></div></div></section><section id="comp-lelpqxj6" tabindex="-1" class="Oqnisf comp-lelpqxj6 wixui-section"><div id="bgLayers_comp-lelpqxj6" data-hook="bgLayers" class="MW5IWV"><div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div><div id="bgMedia_comp-lelpqxj6" class="VgO9Yg"><wow-image id="img_comp-lelpqxj6" class="HlRz5e Kv1aVt dLPlxY mNGsUM bgImage" data-image-info="{&quot;containerId&quot;:&quot;comp-lelpqxj6&quot;,&quot;alignType&quot;:&quot;center&quot;,&quot;displayMode&quot;:&quot;original_size&quot;,&quot;targetWidth&quot;:980,&quot;targetHeight&quot;:6063,&quot;isLQIP&quot;:true,&quot;imageData&quot;:{&quot;width&quot;:7680,&quot;height&quot;:4320,&quot;uri&quot;:&quot;d77fce_4f89e2795ea643f7855e39727c31a807~mv2.jpg&quot;,&quot;name&quot;:&quot;&quot;,&quot;displayMode&quot;:&quot;original_size&quot;}}" data-bg-effect-name="" data-has-ssr-src="true"><img src="../../static.wixstatic.com/media/d77fce_4f89e2795ea643f7855e39727c31a807_mv2.jpg/v1/crop/x_3350%2cy_0%2cw_980%2ch_4320%2cq_90%2cblur_2%2cenc_auto/d77fce_4f89e2795ea643f7855e39727c31a807_mv2.jpg" alt="792949.jpg" style="width:100%;height:100%;position:absolute;top:auto;right:auto;bottom:auto;left:auto;object-fit:none"/></wow-image></div></div><div data-mesh-id="comp-lelpqxj6inlineContent" data-testid="inline-content" class=""><div data-mesh-id="comp-lelpqxj6inlineContent-gridContainer" data-testid="mesh-container-content"><div id="comp-lelpsqpp" class="KcpHeO tz5f0K comp-lelpsqpp wixui-rich-text" data-testid="richTextElement"><h2 class="font_2 wixui-rich-text__text" style="font-size:40px; line-height:normal; text-align:center;"><span style="color:#C9A34A;" class="wixui-rich-text__text"><span style="font-family:wfont_1f140e_28ee451a1fe54ac4a33b285bcca9785b,wf_28ee451a1fe54ac4a33b285bc,orig_orbitronio;" class="wixui-rich-text__text"><span style="font-size:40px;" class="wixui-rich-text__text"><span style="letter-spacing:0.2em;" class="wixui-rich-text__text">Namesake</span></span></span></span></h2></div><div id="comp-lelptplr" class="KcpHeO tz5f0K comp-lelptplr wixui-rich-text" data-testid="richTextElement"><p class="font_7 wixui-rich-text__text" style="text-align:justify; font-size:20px;"><span style="font-family:wfont_f600bf_6b757cabf5f14c2589f7609569f9d3a8,wf_6b757cabf5f14c2589f760956,orig_neuropolxrgregular;" class="wixui-rich-text__text">Jupiter, being the biggest planet, gets its name from the king of the ancient Roman gods.</span></p></div><div id="comp-lelpuqzn" class="KcpHeO tz5f0K comp-lelpuqzn wixui-rich-text" data-testid="richTextElement"><h2 class="font_2 wixui-rich-text__text" style="font-size:40px; line-height:normal; text-align:center;"><span style="font-size:40px;" class="wixui-rich-text__text"><span style="color:#7C6666;" class="wixui-rich-text__text"><span style="font-family:wfont_1f140e_28ee451a1fe54ac4a33b285bcca9785b,wf_28ee451a1fe54ac4a33b285bc,orig_orbitronio;" class="wixui-rich-text__text"><span style="letter-spacing:0.2em;" class="wixui-rich-text__text">Potential for Life</span></span></span></span></h2></div><div id="comp-lelpvxpd" class="KcpHeO tz5f0K comp-lelpvxpd wixui-rich-text" data-testid="richTextElement"><p class="font_8 wixui-rich-text__text" style="font-size:19px; text-align:justify;"><span style="font-size:19px;" class="wixui-rich-text__text"><span style="font-family:wfont_f600bf_6b757cabf5f14c2589f7609569f9d3a8,wf_6b757cabf5f14c2589f760956,orig_neuropolxrgregular;" class="wixui-rich-text__text">Jupiter&rsquo;s environment is probably not conducive to life as we know it. The temperatures, pressures, and materials that characterize this planet are most likely too extreme and volatile for organisms to adapt to.</span></span></p>
